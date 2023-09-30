@@ -1,0 +1,101 @@
+Example Number,Input,Output
+1,The quarterback threw a touchdown pass in the final minutes of the game.,sports
+2,The presidential candidate held a rally in the swing state.,politics
+3,The study of genetics has led to breakthroughs in personalized medicine.,science
+4,The soccer player scored a hat-trick in the championship match.,sports
+5,The senator delivered a passionate speech on healthcare reform.,politics
+6,The experiment in the chemistry lab resulted in a volatile reaction.,science
+7,The marathon runner crossed the finish line exhausted but victorious.,sports
+8,The mayor announced a new initiative to combat homelessness.,politics
+9,The development of renewable energy sources is crucial for environmental sustainability.,science
+10,The tennis match went into a thrilling tiebreaker.,sports
+11,The prime minister addressed the nation in a televised speech.,politics
+12,The astronomer observed a rare celestial event with the telescope.,science
+13,The basketball team made it to the finals with a dominant performance.,sports
+14,The governor vetoed the proposed budget, leading to political tension.,politics
+15,The microbiologist made a groundbreaking discovery about antibiotic resistance.,science
+16,The election campaign focused on economic policies.,politics
+17,The geologist studied rock formations to understand Earth's history.,science
+18,The golfer sank a long putt to win the championship.,sports
+19,The president delivered the State of the Union address to Congress.,politics
+20,The meteorologist predicted severe weather for the weekend.,science
+21,The hockey team advanced to the playoffs after a hard-fought season.,sports
+22,The parliament debated a controversial immigration bill.,politics
+23,The biologist researched the behavior of migratory birds.,science
+24,The ice hockey player scored the game-winning goal in overtime.,sports
+25,The city council discussed funding for public libraries.,politics
+26,The physicist conducted experiments on quantum entanglement.,science
+27,The surfer rode the waves at the famous pipeline spot.,sports
+28,The senator proposed legislation to reform the education system.,politics
+29,The climatologist analyzed data on rising global temperatures.,science
+30,The mixed martial artist won the championship fight by submission.,sports
+31,The city mayor announced a plan for urban development.,politics
+32,The ecologist researched the impact of pollution on aquatic ecosystems.,science
+33,The track and field athlete broke the world record in the long jump.,sports
+34,The congressmen debated tax reform legislation on the floor.,politics
+35,The virologist researched viral mutations and vaccine development.,science
+36,The marathon runner crossed the finish line exhausted but victorious.,sports
+37,The senator filibustered to delay a vote on the budget.,politics
+38,The ornithologist studied the migratory patterns of birds.,science
+39,The Formula 1 driver won the Grand Prix with a spectacular performance.,sports
+40,The government passed a bill to address climate change.,politics
+41,The surfer rode the waves at sunrise for a serene experience.,sports
+42,The archaeologist unearthed ancient artifacts at the dig site.,science
+43,The jockey rode the thoroughbred to victory in the Kentucky Derby.,sports
+44,The congresswoman advocated for affordable healthcare.,politics
+45,The geneticist sequenced the DNA of a rare species.,science
+46,The skateboarder landed a difficult trick in the skate park.,sports
+47,The city council discussed affordable housing initiatives.,politics
+48,The astronaut conducted experiments aboard the International Space Station.,science
+49,The MMA fighter won the championship belt in a brutal bout.,sports
+50,The parliament passed a resolution to address income inequality.,politics
+51,The climatologist studied the effects of climate change on polar ice caps.,science
+52,The Formula E driver raced in the electric car championship.,sports
+53,The senator introduced a bill to reform criminal justice.,politics
+54,The neurosurgeon performed a delicate brain surgery.,science
+55,The rock climber scaled a challenging peak in Yosemite.,sports
+56,The presidential candidate debated their opponent on live television.,politics
+57,The geophysicist studied seismic activity to predict earthquakes.,science
+58,The badminton player won the Olympic gold medal.,sports
+59,The governor signed a bill to increase funding for public schools.,politics
+60,The ecologist researched the behavior of ants in a colony.,science
+61,The snowboarder performed daring tricks in the halfpipe.,sports
+62,The congresswoman introduced legislation to protect endangered species.,politics
+63,The neuroscientist conducted experiments on brain plasticity.,science
+64,The gymnast's routine earned a perfect score from the judges.,sports
+65,The mayor announced plans for a new sports stadium.,politics
+66,The oceanographer studied coral reefs and marine biodiversity.,science
+67,The triathlete completed the grueling Ironman race.,sports
+68,The presidential candidate held a rally in the swing state.,politics
+69,The roboticist developed advanced artificial intelligence algorithms.,science
+70,The city mayor announced a plan for urban development.,politics
+71,The hockey team advanced to the playoffs after a hard-fought season.,sports
+72,The governor vetoed the proposed budget, leading to political tension.,politics
+73,The chemist discovered a novel catalyst for chemical reactions.,science
+74,The gymnast captured the audience's hearts and took home the bronze medal.,sports
+75,The recent findings on black holes have revolutionized our understanding of space-time.,science
+76,The spacecraft successfully docked with the International Space Station.,science
+77,The gymnast captured the audience's hearts and took home the bronze medal.,sports
+78,After months of negotiations, the climate accord was finally agreed upon by the majority of nations.,politics
+79,Scientists successfully cloned a sheep, sparking ethical debates worldwide.,science
+80,The astronaut conducted experiments aboard the International Space Station.,science
+81,The MMA fighter won the championship belt in a brutal bout.,sports
+82,The governor signed a bill to increase funding for public schools.,politics
+83,The equestrian rider cleared every jump in the show jumping competition.,sports
+84,The parliament debated a controversial immigration bill.,politics
+85,The physicist conducted experiments to test quantum theory.,science
+86,The climatologist analyzed data on rising global temperatures.,science
+87,The snowboarder performed daring tricks in the halfpipe.,sports
+88,The mayor announced plans for a new sports stadium.,politics
+89,The archaeologist unearthed ancient artifacts at the dig site.,science
+90,The geneticist sequenced the DNA of a rare species.,science
+91,The athlete won a gold medal at the Olympics.,sports
+92,The legislation was passed after a long debate in the Senate.,politics
+93,The discovery of the Higgs boson at CERN marked a milestone in particle physics.,science
+94,The swimmer broke the world record in the 100-meter freestyle.,sports
+95,The bill received bipartisan support and was signed into law by the president.,politics
+96,The recent findings on black holes have revolutionized our understanding of space-time.,science
+97,The spacecraft successfully docked with the International Space Station.,science
+98,The gymnast captured the audience's hearts and took home the bronze medal.,sports
+99,"After months of negotiations, the climate accord was finally agreed upon by the majority of nations.",politics
+100,"Scientists successfully cloned a sheep, sparking ethical debates worldwide.",science
