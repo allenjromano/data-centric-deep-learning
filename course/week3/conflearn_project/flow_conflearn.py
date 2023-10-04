@@ -168,6 +168,22 @@ class TrainIdentifyReview(FlowSpec):
       # --
       # probs_: np.array[float] (shape: |test set|)
       # ===============================================
+      X_train, X_test = X[train_index], X[test_index]
+      y_train, y_test = y[train_index], y[test_index]
+      X_train = torch.from_numpy(X_train).float()
+      X_test = torch.from_numpy(X_test).float()
+      y_train = torch.from_numpy(y_train).long()
+      y_test = torch.from_numpy(y_test).long()
+      ds_train = TensorDataset(X_Train, y_train)
+      ds_test = TensorDataset(X_test, y_test)
+      dl_train = DataLoader(ds_train, batch_size=32, shuffle=True)
+      dl_test = DataLoader(ds_Test, batch_size=32)
+      system = SentimentClassifierSystem(self.config)
+
+      trainer = Trainer(max_epochs=10)
+      trainer.fit(system, dl_train)
+      probs_ = trainer.test(system, dataloaders=dl_test)
+      probs_ = probs.cpu().numpy()
       assert probs_ is not None, "`probs_` is not defined."
       probs[test_index] = probs_
 
@@ -212,6 +228,7 @@ class TrainIdentifyReview(FlowSpec):
     # --
     # ranked_label_issues: List[int]
     # =============================
+    ranked_label_issues = find_label_issues(self.all_df.label, prob, return_indices_ranked_by="self_confidence")
     assert ranked_label_issues is not None, "`ranked_label_issues` not defined."
 
     # save this to class
