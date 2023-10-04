@@ -104,6 +104,7 @@ def predict_single(self, data):
     # --
     # logits: torch.Tensor (shape: 1x10)
     # ================================
+    system = self.get_system()
     logits = system.predict_step(im)
     assert logits is not None, "logits is not defined."
 
@@ -138,7 +139,7 @@ def predict_single(self, data):
   # why we need Celery.
   # 
   # Uncomment me when you are told to in the notes!
-  # time.sleep(5)
+  time.sleep(5)
   # ================================
 
   return results
