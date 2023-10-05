@@ -174,16 +174,16 @@ class TrainIdentifyReview(FlowSpec):
       X_test = torch.from_numpy(X_test).float()
       y_train = torch.from_numpy(y_train).long()
       y_test = torch.from_numpy(y_test).long()
-      ds_train = TensorDataset(X_Train, y_train)
+      ds_train = TensorDataset(X_train, y_train)
       ds_test = TensorDataset(X_test, y_test)
       dl_train = DataLoader(ds_train, batch_size=32, shuffle=True)
-      dl_test = DataLoader(ds_Test, batch_size=32)
+      dl_test = DataLoader(ds_test, batch_size=32)
       system = SentimentClassifierSystem(self.config)
 
       trainer = Trainer(max_epochs=10)
       trainer.fit(system, dl_train)
       probs_ = trainer.test(system, dataloaders=dl_test)
-      probs_ = probs.cpu().numpy()
+      probs_ = probs_.cpu().numpy()
       assert probs_ is not None, "`probs_` is not defined."
       probs[test_index] = probs_
 
@@ -325,6 +325,9 @@ class TrainIdentifyReview(FlowSpec):
     # dm.dev_dataset.data = dev slice of self.all_df
     # dm.test_dataset.data = test slice of self.all_df
     # # ====================================
+    dm.train_dataset.data = self.all_df[:train_size-1]
+    dm.dev_dataset.data = self.all_df[train_size:dev_size-1]
+    dm.test_dataset.data = self.all_df[dev_size:]
 
     # start from scratch
     system = SentimentClassifierSystem(self.config)
