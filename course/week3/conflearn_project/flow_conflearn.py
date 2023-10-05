@@ -183,7 +183,7 @@ class TrainIdentifyReview(FlowSpec):
       trainer = Trainer(max_epochs=10)
       trainer.fit(system, dl_train)
       probs_ = trainer.test(system, dataloaders=dl_test)
-      probs_ = probs_.cpu().numpy()
+      probs_ = np.array(probs_)
       assert probs_ is not None, "`probs_` is not defined."
       probs[test_index] = probs_
 
