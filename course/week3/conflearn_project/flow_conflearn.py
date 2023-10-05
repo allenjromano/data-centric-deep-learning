@@ -170,10 +170,10 @@ class TrainIdentifyReview(FlowSpec):
       # ===============================================
       X_train, X_test = X[train_index], X[test_index]
       y_train, y_test = y[train_index], y[test_index]
-      X_train = torch.from_numpy(X_train).float()
-      X_test = torch.from_numpy(X_test).float()
-      y_train = torch.from_numpy(y_train).long()
-      y_test = torch.from_numpy(y_test).long()
+      X_train = torch.tensor(X_train)
+      X_test = torch.tensor(X_test)
+      y_train = torch.tensor(y_train)
+      y_test = torch.tensor(y_test)
       ds_train = TensorDataset(X_train, y_train)
       ds_test = TensorDataset(X_test, y_test)
       dl_train = DataLoader(ds_train, batch_size=32, shuffle=True)
@@ -182,10 +182,13 @@ class TrainIdentifyReview(FlowSpec):
 
       trainer = Trainer(max_epochs=10)
       trainer.fit(system, dl_train)
-      probs_ = trainer.test(system, dataloaders=dl_test)
-      probs_ = np.array(probs_)
+      predictions = trainer.predict(system, dataloaders=dl_test)
+      print(predictions[0].shape)
+      print(predictions[0])
+      probs_ = torch.cat([output for output in predictions]).numpy()
+      print(len(probs_))
       assert probs_ is not None, "`probs_` is not defined."
-      probs[test_index] = probs_
+      probs[test_index] = probs_.squeeze()
 
     # create a single dataframe with all input features
     all_df = pd.concat([
@@ -326,8 +329,8 @@ class TrainIdentifyReview(FlowSpec):
     # dm.test_dataset.data = test slice of self.all_df
     # # ====================================
     dm.train_dataset.data = self.all_df[:train_size-1]
-    dm.dev_dataset.data = self.all_df[train_size:dev_size-1]
-    dm.test_dataset.data = self.all_df[dev_size:]
+    dm.dev_dataset.data = self.all_df[train_size:train_size+dev_size-1]
+    dm.test_dataset.data = self.all_df[train_size+dev_size:]
 
     # start from scratch
     system = SentimentClassifierSystem(self.config)
